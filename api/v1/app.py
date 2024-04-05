@@ -14,11 +14,6 @@ app.register_blueprint(app_views)
 cors = CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
 
-@app.route('/2-hbnb')
-def hbnb_route():
-    return "This is the 2-hbnb route."
-
-
 @app.teardown_appcontext
 def close_db(error):
     """ Close Storage """
