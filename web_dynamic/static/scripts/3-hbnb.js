@@ -64,5 +64,22 @@ function placesSearch() {
     type: "POST",
     contentType: "application/json",
     data: JSON.stringify({}),
+    success: function (response) {
+      response.forEach(function (place) {
+        var article = $("<article>");
+        var name = $("<h2>").addClass("title_box");
+        article.append(name);
+        var description = $("<p>").text(
+          place.description.replace("Owner:", "")
+        );
+        article.append(description);
+        $("section.places").append(article);
+      });
+    },
+    error: function (error) {
+      console.log(error);
+    },
   });
 }
+
+placesSearch();
