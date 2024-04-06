@@ -55,6 +55,5 @@ function checkAPIStatus() {
     },
   });
 
-  // Call the checkAPIStatus function when the document is ready
   checkAPIStatus();
 }
