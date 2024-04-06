@@ -70,7 +70,7 @@ function placesSearch() {
         var name = $("<h2>").addClass("title_box");
         article.append(name);
         var description = $("<p>").text(
-          place.description.replace("Owner:", "")
+          place.description.replace("Owner:", "").trim()
         );
         article.append(description);
         $("section.places").append(article);
