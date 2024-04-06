@@ -41,7 +41,7 @@ function updateAmenitiesList() {
 // Function to check API status and update the div#api_status accordingly
 function checkAPIStatus() {
   $.ajax({
-    url: "http://0.0.0.0:5001/api/v1/status/",
+    url: "http://0.0.0.0:5001/api/v1/places_search/",
     type: "GET",
     success: function (response) {
       if (response.status === "OK") {
@@ -56,4 +56,13 @@ function checkAPIStatus() {
   });
 
   checkAPIStatus();
+}
+
+function placesSearch() {
+  $.ajax({
+    url: "http://0.0.0.0:5001/api/v1/places_search",
+    type: "POST",
+    contentType: "application/json",
+    data: JSON.stringify({}),
+  });
 }
