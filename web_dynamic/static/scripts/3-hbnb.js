@@ -1,3 +1,4 @@
+#!/usr/bin/node
 $(document).ready(function () {
   // This function executes when the DOM is fully loaded
 });
