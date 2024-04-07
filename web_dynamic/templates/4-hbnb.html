@@ -68,7 +68,7 @@
               {% for amenity in amenities %}
               <!-- Added checkbox to each amenity with data-id and data-name attributes -->
               <li data-id="{{ amenity.id }}" data-name="{{ amenity.name }}">
-                <input type="checkbox" />
+                <input type="checkbox" style="margin-right: 10px" />
                 {{ amenity.name }}
               </li>
               {% endfor %}
