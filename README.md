@@ -183,7 +183,7 @@ Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://tw
 Jhoan Zamora - [Github](https://github.com/jzamora5) / [Twitter](https://twitter.com/JhoanZamora10)  
 David Ovalle - [Github](https://github.com/Nukemenonai) / [Twitter](https://twitter.com/disartDave)
 Nathen Williams [Github](https://github.com/AlleywayNate)
-Nolan Heald [Github](https://github.com/NolanHeald)
+Nolan H [Github](https://github.com/NJHpr94)
 Abrielle Perry [Github](https://github.com/abrielleperry)
 
 Second part of Airbnb: Joann Vuong
