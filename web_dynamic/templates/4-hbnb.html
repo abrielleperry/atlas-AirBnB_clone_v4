@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <!-- Import JQuery library -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- Import 4-hbnb.js script with cache_id as query string -->
+    <!-- Import 2-hbnb.js script with cache_id as query string -->
     <script src="../static/scripts/4-hbnb.js?cache_id={{ cache_id }}"></script>
     <!-- Existing CSS imports remain unchanged -->
     <link
@@ -34,23 +34,16 @@
     />
     <link rel="icon" href="../static/images/icon.png?cache_id={{ cache_id }}" />
     <title>HBnB</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../static/scripts/4-hbnb.js?cache_id={{ cache_id }}"
+    ></script>
   </head>
   <body>
     <header>
       <div class="logo"></div>
-      <div
-        id="api_status"
-        style="
-          position: absolute;
-          right: 30px;
-          top: 50;
-          transform: translateY(-50%);
-          width: 40px;
-          height: 40px;
-          background-color: #cccccc;
-          border-radius: 50%;
-        "
-      ></div>
+      <div id="api_status"></div>
     </header>
     <div class="container">
       <section class="filters">
@@ -78,23 +71,22 @@
           <div class="popover">
             <ul>
               {% for amenity in amenities %}
-              <!-- Added checkbox to each amenity with data-id and data-name attributes -->
-              <li data-id="{{ amenity.id }}" data-name="{{ amenity.name }}">
-                <input type="checkbox" />
-                {{ amenity.name }}
+              <li>
+                <input
+                  type="checkbox"
+                  data-id="{{ amenity.id }}"
+                  data-name="{{ amenity.name }}"
+                  style="margin-right: 10px"
+                />{{ amenity.name }}
               </li>
               {% endfor %}
             </ul>
           </div>
         </div>
-        <!-- Button for filtering -->
-        <button id="filterButton" type="button">Filter</button>
+        <button type="button">Search</button>
       </section>
       <div class="placesh1"><h1>Places</h1></div>
-      <section class="places">
-        <!-- Existing code remains unchanged -->
-        <!-- <h1>Places</h1> -->
-      </section>
+      <section class="places"></section>
     </div>
     <footer>
       <p>Holberton School</p>
