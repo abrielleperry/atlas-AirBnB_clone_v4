@@ -41,7 +41,7 @@ function placesSearch() {
     dataType: "json",
     success: function (response) {
       $("section.places").append(
-        data.map((places) => {
+        response.map((places) => {
           return (
             <article>
               <div class="title_box">
@@ -55,7 +55,7 @@ function placesSearch() {
                   {places.number_bathrooms} Bathroom(s)
                 </div>
               </div>
-              <div class="description">${place.description}</div>
+              <div class="description">${places.description}</div>
             </article>
           );
         })
