@@ -1,4 +1,3 @@
-#!/usr/bin/node
 $(document).ready(function () {
   // Initialize an object to store checked amenity IDs
   var checkedAmenities = {};
