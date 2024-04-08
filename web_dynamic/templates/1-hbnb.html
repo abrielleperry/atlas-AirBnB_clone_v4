@@ -29,11 +29,11 @@
     />
     <link rel="icon" href="../static/images/icon.png?cache_id={{ cache_id }}" />
     <title>HBnB</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script
       type="text/javascript"
       src="../static/scripts/1-hbnb.js?cache_id={{ cache_id }}"
     ></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   </head>
   <body>
     <header>
@@ -79,7 +79,9 @@
         </div>
         <button type="button">Search</button>
       </section>
-      <div class="placesh1"><h1>Places</h1></div>
+      <div class="placesh1">
+        <h1>Places</h1>
+      </div>
       <section class="places">
         <!-- Existing code remains unchanged -->
         <!-- <h1>Places</h1> -->
@@ -106,7 +108,7 @@
           <div class="user">
             <b>Owner:</b> {{ place.user.first_name }} {{ place.user.last_name }}
           </div>
-          <div class="description">{{ place.description | safe }}</div>
+          <div class="description">{{ place.description|safe }}</div>
         </article>
         {% endfor %}
       </section>
