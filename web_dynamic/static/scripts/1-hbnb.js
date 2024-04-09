@@ -11,7 +11,14 @@ $(document).ready(function () {
       delete checkedAmenities[amenityId];
     }
 
-    const amenitiesList = Object.values(checkedAmenities).join(", ");
-    $(".amenities > h4").text(amenitiesList);
+    localStorage.setItem("checkedAmenities", JSON.stringify(checkedAmenities));
+    updateAmenitiesList();
   });
+
+  function updateAmenitiesList() {
+    const amenitiesList = Object.values(checkedAmenities).join(", ");
+    $(".amenities h4").text(amenitiesList);
+  }
+
+  updateAmenitiesList();
 });
