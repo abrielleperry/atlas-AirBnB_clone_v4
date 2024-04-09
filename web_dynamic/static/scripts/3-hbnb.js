@@ -12,7 +12,7 @@ $(document).ready(function () {
     }
 
     const amenitiesList = Object.values(checkedAmenities).join(", ");
-    $(".amenities > h4").text(amenitiesList);
+    $("#checkedAmenitiesList").text(amenitiesList);
   });
 
   checkAPIStatus();
@@ -39,24 +39,26 @@ function placesSearch() {
     dataType: "json",
     success: function (response) {
       $("section.places").append(
-        response.map((places) => {
-          return (
+        response
+          .map((places) => {
+            return `
             <article>
               <div class="title_box">
-                <h2>{places.name}</h2>
+                <h2>${places.name}</h2>
                 <div class="price_by_night">${places.price_by_night}</div>
               </div>
               <div class="information">
-                <div class="max_guest">{places.max_guest} Guest(s)</div>
-                <div class="number_rooms">{places.number_rooms} Bedroom(s)</div>
+                <div class="max_guest">${places.max_guest} Guest(s)</div>
+                <div class="number_rooms">${places.number_rooms} Bedroom(s)</div>
                 <div class="number_bathrooms">
-                  {places.number_bathrooms} Bathroom(s)
+                ${places.number_bathrooms} Bathroom(s)
                 </div>
               </div>
               <div class="description">${places.description}</div>
             </article>
-          );
-        })
+          `;
+          })
+          .join("")
       );
     },
   });
