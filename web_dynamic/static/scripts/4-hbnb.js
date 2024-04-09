@@ -31,7 +31,7 @@ function checkAPIStatus() {
 }
 
 // Task 4: Fetch places from the API
-function placesSearch() {
+function placesSearch(id) {
   const checkedAmenities = {};
   $('input[type="checkbox"]:checked').each(function () {
     const amenityId = $(this).data("id");
