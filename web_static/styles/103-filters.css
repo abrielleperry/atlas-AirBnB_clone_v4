@@ -6,7 +6,6 @@
     display: flex;  
     align-items: center;
     position: relative;
-    
 }
 
 .filters button {
@@ -21,8 +20,8 @@
     right: 30px;
     box-sizing: border-box;
 }
+
 .filters button:hover {
-    
     background-color: #223FB0;
 }
 
@@ -45,12 +44,14 @@
     font-weight: 600;
     margin: 2px 20px;
 }
+
 .locations h4,  .amenities h4{
     font-weight: 400;
     font-size: 14px;
     margin: 2px 20px;   
     
 }
+
 .popover {
     display: none;
     background-color: #FAFAFA;
@@ -67,10 +68,12 @@ div:hover > .popover {
     display: block;
     cursor: pointer;
     
-  }
+}
+
 .popover h2 {
     font-size: 16px;
 }
+
 .popover li {
     margin: 10px 0px 5px 0px; 
     list-style: none;
@@ -84,9 +87,10 @@ div:hover > .popover {
     margin: 0 0 0 5%;
     padding: 0.2em;
 }
+
 .filters .amenities ul {
     padding: 2em 0 2em 3em;
-  }
+}
 
 
 @media only screen and (max-width: 1030px) 
@@ -96,6 +100,7 @@ div:hover > .popover {
         margin: 0 auto;
     }
 }
+
 @media only screen and (max-width: 600px) 
 {
     .filters .locations,.filters .amenities {
@@ -108,8 +113,8 @@ div:hover > .popover {
         margin: 0 0 0 5%;
         padding: 0;
     }
-
 }
+
 @media only screen and (max-width: 360px) 
 {
     .filters button {
@@ -120,6 +125,7 @@ div:hover > .popover {
         padding: 0px;
     }
 }
+
 @media only screen and (max-width: 350px) 
 {
     .filters .locations,.filters .amenities {
@@ -143,6 +149,7 @@ div:hover > .popover {
 
     }
 }
+
 @media only screen and (max-width: 280px) 
 {
     .filters button {
@@ -161,6 +168,7 @@ div:hover > .popover {
     }
     
 }
+
 @media only screen and (max-width: 250px) 
 {
     .filters button {
