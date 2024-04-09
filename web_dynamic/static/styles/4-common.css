@@ -9,3 +9,13 @@ body .container {
   max-width: 1000px;
   margin: 30px auto;
 }
+
+#checkedAmenitiesList {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

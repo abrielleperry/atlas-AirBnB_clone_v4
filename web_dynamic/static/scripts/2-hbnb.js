@@ -12,7 +12,7 @@ $(document).ready(function () {
     }
 
     const amenitiesList = Object.values(checkedAmenities).join(", ");
-    $(".amenities > h4").text(amenitiesList);
+    $("#checkedAmenitiesList").text(amenitiesList);
   });
 
   checkAPIStatus();

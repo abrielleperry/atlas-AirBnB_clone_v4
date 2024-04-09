@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#search").click(placesSearch);
+  $("#button").click(placesSearch);
   const checkedAmenities = {};
 
   $('input[type="checkbox"]').change(function () {
@@ -13,7 +13,7 @@ $(document).ready(function () {
     }
 
     const amenitiesList = Object.values(checkedAmenities).join(", ");
-    $(".amenities > h4").text(amenitiesList);
+    $("#checkedAmenitiesList").text(amenitiesList);
   });
 
   checkAPIStatus();

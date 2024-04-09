@@ -12,7 +12,7 @@ $(document).ready(function () {
     }
 
     const amenitiesList = Object.values(checkedAmenities).join(", ");
-    $(".amenities > h4").text(amenitiesList);
+    $("#checkedAmenitiesList").text(amenitiesList);
   });
 
   checkAPIStatus();
@@ -20,7 +20,7 @@ $(document).ready(function () {
 
 // Task 3: Check API status
 function checkAPIStatus() {
-  $.get("http://0.0.0.0:5001/api/v1/status/", { type: "GET" }, function (data) {
+  $.get("http://0.0.0.0:5000/api/v1/status/", { type: "GET" }, function (data) {
     if (data.status === "OK") {
       $("#api_status").addClass("available");
     } else {
